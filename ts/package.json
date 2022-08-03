@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "eratosthenes": "ts-node ./src/eratosthenes.ts"
+    "eratosthenes": "node -r esbuild-register ./src/eratosthenes.ts"
   },
   "dependencies": {
-    "ts-node": "^10.9.1",
-    "typescript": "^4.7.4"
+    "esbuild": "^0.14.53",
+    "esbuild-register": "^3.3.3"
   }
 }
