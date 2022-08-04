@@ -8,8 +8,8 @@ const getPrimeNumbers = (maximum: number) => {
 
   const primeNumbers: number[] = [];
 
-  for (; true; ) {
-    if (!list[0]) break;
+  for (;;) {
+    if (list[0] > Math.sqrt(maximum)) break;
 
     // 0番目の数字は必ず素数なので素数配列に格納
     primeNumbers.push(list[0]);
@@ -23,9 +23,9 @@ const getPrimeNumbers = (maximum: number) => {
     list = filteredList;
   }
 
-  return primeNumbers;
+  return [...primeNumbers, ...list];
 };
 
 console.time('eratosthenes');
-console.log(getPrimeNumbers(50));
+console.log(getPrimeNumbers(100));
 console.timeEnd('eratosthenes');
